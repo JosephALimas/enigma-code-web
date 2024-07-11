@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/fondo_de_marmol.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los botones a la izquierda */
+    position: absolute;
+    left: 20px; /* Ajusta esta medida según sea necesario */
+}
+
+.button-container button {
+    background-image: url("./img/fondo_de_marmol.jpeg");
+    border: none;
+    padding: 15px;
+    margin: 10px 0; /* Espacio entre los botones en vertical */
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 40px;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.button-container button:focus {
+    outline: none;
+}
+
+.down-button {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón hacia abajo */
+}
+
+.circles-container {
+    position: relative;
+    width: 300px; /* Ajustado para ser más pequeño */
+    height: 300px; /* Ajustado para ser más pequeño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.circle {
+    background-image: url(./img/fondo_de_marmol.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Tamaños y posiciones de los círculos */
+.circle1 {
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.circle2 {
+    width: 240px;
+    height: 240px;
+    z-index: 2;
+}
+
+.circle3 {
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+}
+
+.circle4 {
+    width: 120px;
+    height: 120px;
+    z-index: 4;
+}
+
+.circle5 {
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+}
+
+.selected {
+    outline: 2px solid red; /* Resalta el círculo seleccionado */
+}
+
+.icon-strip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    font-size: 12px; /* Ajusta el tamaño de los íconos según sea necesario */
+}
+
+/* Distribuye los íconos en un círculo */   
+.icon-strip .icon:nth-child(1) { transform: rotate(0deg) translateY(50%); }
+.icon-strip .icon:nth-child(2) { transform: rotate(72deg) translateY(50%); }
+.icon-strip .icon:nth-child(3) { transform: rotate(144deg) translateY(50%); }
+.icon-strip .icon:nth-child(4) { transform: rotate(216deg) translateY(50%); }
+.icon-strip .icon:nth-child(5) { transform: rotate(288deg) translateY(50%); }
+
