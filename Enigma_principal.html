@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Enigma_principal_style.css">
-    <title>Flechas con Fondo</title>
+    <title>Enigma code</title>
 </head>
 <body>
     <div class="button-container">
-        <button class="up-button" onclick="rotateSelectedCircle('left')">&#8679;</button> <!-- Flecha hacia arriba -->
-        <button class="down-button" onclick="rotateSelectedCircle('right')">&#8681;</button> <!-- Flecha hacia abajo -->
+        <button class="up-button" onclick="rotateSelectedCircle('right')">&#8679;</button> <!-- Flecha hacia arriba -->
+        <button class="down-button" onclick="rotateSelectedCircle('left')">&#8681;</button> <!-- Flecha hacia abajo -->
     </div>
     <div class="circles-container">
         <div class="circle circle1" onclick="selectCircle('circle1')">
             <div class="icon-strip1">
                 <!-- Tira de iconos alrededor del círculo 1 -->
-                <i class="icon">⭐</i>
-                <i class="icon">⭐</i>
-                <i class="icon">⭐</i>
-                <i class="icon">⭐</i>
-                <i class="icon">⭐</i>
-                <i class="icon">⭐</i>
                 <i class="icon">⭐</i>
                 <i class="icon">⭐</i>
                 <i class="icon">⭐</i>
@@ -38,24 +32,11 @@
                 <i class="icon">🔶</i>
                 <i class="icon">🔶</i>
                 <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
-                <i class="icon">🔶</i>
             </div>
         </div>
         <div class="circle circle3" onclick="selectCircle('circle3')">
             <div class="icon-strip3">
                 <!-- Tira de iconos alrededor del círculo 3 -->
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
-                <i class="icon">💧</i>
                 <i class="icon">💧</i>
                 <i class="icon">💧</i>
                 <i class="icon">💧</i>
@@ -71,13 +52,6 @@
                 <i class="icon">🌟</i>
                 <i class="icon">🌟</i>
                 <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🌟</i>
             </div>
         </div>
         <div class="circle circle5" onclick="selectCircle('circle5')">
@@ -88,45 +62,9 @@
                 <i class="icon">🔥</i>
                 <i class="icon">🔥</i>
                 <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
-                <i class="icon">🔥</i>
             </div>
         </div>
     </div>
-    <script>
-        let rotation = 0;
-let selectedCircle = null;
-
-function selectCircle(circleClass) {
-    selectedCircle = document.querySelector(`.${circleClass}`);
-    document.querySelectorAll('.circle').forEach(circle => {
-        circle.classList.remove('selected');
-    });
-    selectedCircle.classList.add('selected');
-    // Reseteo de rotación a 0 cuando se selecciona un nuevo círculo
-    rotation = 0;
-    selectedCircle.style.transform = `rotate(${rotation}deg)`;
-    const iconStrip = selectedCircle.querySelector('.icon-strip');
-    iconStrip.style.transform = `rotate(${-rotation}deg)`;
-}
-
-function rotateSelectedCircle(direction) {
-    if (!selectedCircle) return;
-    if (direction === 'left') {
-        rotation -= 90;
-    } else if (direction === 'right') {
-        rotation += 90;
-    }
-    selectedCircle.style.transform = `rotate(${rotation}deg)`;
-    const iconStrip = selectedCircle.querySelector('.icon-strip');
-    iconStrip.style.transform = `rotate(${-rotation}deg)`;
-}
-
-    </script>
+    <script src="./Enigma_principal.js">    </script>
 </body>
 </html>
