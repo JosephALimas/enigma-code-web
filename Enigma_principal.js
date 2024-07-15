@@ -35,9 +35,9 @@ function selectCircle(circleClass) {
 function rotateSelectedCircle(direction) {
     if (!selectedCircle) return;
     if (direction === 'right') {
-        rotation += 90;
+        rotation += 72;
     } else if (direction === 'left') {
-        rotation -= 90;
+        rotation -= 72;
     }
 
     selectedCircle.style.transform = `rotate(${rotation}deg)`;
