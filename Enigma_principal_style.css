@@ -13,16 +13,15 @@ body {
 .button-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los botones a la izquierda */
+    align-items: flex-start;
     position: absolute;
-    left: 20px; /* Ajusta esta medida según sea necesario */
+    left: 20px; 
 }
-
 .button-container button {
     background-image: url("./img/fondo_de_marmol.jpeg");
     border: none;
     padding: 15px;
-    margin: 10px 0; /* Espacio entre los botones en vertical */
+    margin: 10px 0; 
     margin-left: 20rem;
     cursor: pointer;
     border-radius: 50%;
@@ -35,16 +34,53 @@ body {
 
 }
 
+#contador {
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: black;
+    color: red;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 15px;
+    margin: 10px 0; 
+    margin-left: 18.5rem;
+    align-items: center;
 
+}
+.up-button {
+    width: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.up-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
+}
+.up-button:active {
+    transform: translateY(-1px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
+}
 .down-button {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón hacia abajo */
+    width: 20%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.down-button:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
+}
+.down-button:active {
+    transform: translateY(1px); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .circles-container {
     margin-left: 30rem;
     position: relative;
-    width: 600px; /* Ajustado para ser más grande */
-    height: 600px; /* Ajustado para ser más grande */
+    width: 600px; 
+    height: 600px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,17 +100,25 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Tamaños y posiciones de los círculos */
 .circle1 {
     width: 500px;
     height: 500px;
     z-index: 1;
 }
+.circle1:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
+}
+
 
 .circle2 {
     width: 400px;
     height: 400px;
     z-index: 2;
+}
+.circle2:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
 }
 
 .circle3 {
@@ -82,11 +126,20 @@ body {
     height: 300px;
     z-index: 3;
 }
+.circle3:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
+}
+
 
 .circle4 {
     width: 200px;
     height: 200px;
     z-index: 4;
+}
+.circle4:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
 }
 
 .circle5 {
@@ -94,15 +147,19 @@ body {
     height: 100px;
     z-index: 5;
 }
+.circle5:hover {
+    transform: translateY(2px); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); 
+}
 
 .selected {
-    outline: 2px solid red; /* Resalta el círculo seleccionado */
+    outline: 2px solid red; 
 }
 
 .icon-strip1, .icon-strip2, .icon-strip3, .icon-strip4, .icon-strip5 {
     position: absolute;
-    top: 50%; /* Ajusta los iconos al centro vertical del círculo */
-    left: 50%; /* Ajusta los iconos al centro horizontal del círculo */
+    top: 50%;
+    left: 50%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,30 +167,97 @@ body {
 
 .icon {
     position: absolute;
-    font-size: 12px; /* Ajusta el tamaño de los íconos según sea necesario */
+    font-size: 1rem;
+    width: 2.4rem;
+    height: 2.4rem;
 }
+
 .icon-strip1 .icon:nth-child(1) { transform: rotate(0deg) translate(225px); }
 .icon-strip1 .icon:nth-child(2) { transform: rotate(72deg) translate(225px); }
 .icon-strip1 .icon:nth-child(3) { transform: rotate(144deg) translate(225px); }
 .icon-strip1 .icon:nth-child(4) { transform: rotate(216deg) translate(225px); }
 .icon-strip1 .icon:nth-child(5) { transform: rotate(288deg) translate(225px); }
+.icon-strip1 .icon:nth-child(6) { transform: rotate(0deg) translate(225px); }
+.icon-strip1 .icon:nth-child(7) { transform: rotate(72deg) translate(225px); }
+.icon-strip1 .icon:nth-child(8) { transform: rotate(144deg) translate(225px); }
+.icon-strip1 .icon:nth-child(9) { transform: rotate(216deg) translate(225px); }
+.icon-strip1 .icon:nth-child(10) { transform: rotate(288deg) translate(225px); }
 .icon-strip2 .icon:nth-child(1) { transform: rotate(0deg) translate(180px); }
 .icon-strip2 .icon:nth-child(2) { transform: rotate(72deg) translate(180px); }
 .icon-strip2 .icon:nth-child(3) { transform: rotate(144deg) translate(180px); }
 .icon-strip2 .icon:nth-child(4) { transform: rotate(216deg) translate(180px); }
 .icon-strip2 .icon:nth-child(5) { transform: rotate(288deg) translate(180px); }
+.icon-strip2 .icon:nth-child(6) { transform: rotate(0deg) translate(180px); }
+.icon-strip2 .icon:nth-child(7) { transform: rotate(72deg) translate(180px); }
+.icon-strip2 .icon:nth-child(8) { transform: rotate(144deg) translate(180px); }
+.icon-strip2 .icon:nth-child(9) { transform: rotate(216deg) translate(180px); }
+.icon-strip2 .icon:nth-child(10) { transform: rotate(288deg) translate(180px); }
+
+
 .icon-strip3 .icon:nth-child(1) { transform: rotate(0deg) translate(135px); }
 .icon-strip3 .icon:nth-child(2) { transform: rotate(72deg) translate(135px); }
 .icon-strip3 .icon:nth-child(3) { transform: rotate(144deg) translate(135px); }
 .icon-strip3 .icon:nth-child(4) { transform: rotate(216deg) translate(135px); }
 .icon-strip3 .icon:nth-child(5) { transform: rotate(288deg) translate(135px); }
+.icon-strip3 .icon:nth-child(6) { transform: rotate(0deg) translate(135px); }
+.icon-strip3 .icon:nth-child(7) { transform: rotate(72deg) translate(135px); }
+.icon-strip3 .icon:nth-child(8) { transform: rotate(144deg) translate(135px); }
+.icon-strip3 .icon:nth-child(9) { transform: rotate(216deg) translate(135px); }
+.icon-strip3 .icon:nth-child(10) { transform: rotate(288deg) translate(135px); }
+
+
 .icon-strip4 .icon:nth-child(1) { transform: rotate(0deg) translate(90px); }
 .icon-strip4 .icon:nth-child(2) { transform: rotate(72deg) translate(90px); }
 .icon-strip4 .icon:nth-child(3) { transform: rotate(144deg) translate(90px); }
 .icon-strip4 .icon:nth-child(4) { transform: rotate(216deg) translate(90px); }
 .icon-strip4 .icon:nth-child(5) { transform: rotate(288deg) translate(90px); }
+.icon-strip4 .icon:nth-child(6) { transform: rotate(0deg) translate(90px); }
+.icon-strip4 .icon:nth-child(7) { transform: rotate(72deg) translate(90px); }
+.icon-strip4 .icon:nth-child(8) { transform: rotate(144deg) translate(90px); }
+.icon-strip4 .icon:nth-child(9) { transform: rotate(216deg) translate(90px); }
+.icon-strip4 .icon:nth-child(10) { transform: rotate(288deg) translate(90px); }
+
+
+
 .icon-strip5 .icon:nth-child(1) { transform: rotate(0deg) translate(45px); }
 .icon-strip5 .icon:nth-child(2) { transform: rotate(72deg) translate(45px); }
 .icon-strip5 .icon:nth-child(3) { transform: rotate(144deg) translate(45px); }
 .icon-strip5 .icon:nth-child(4) { transform: rotate(216deg) translate(45px); }
 .icon-strip5 .icon:nth-child(5) { transform: rotate(288deg) translate(45px); }
+.icon-strip5 .icon:nth-child(6) { transform: rotate(0deg) translate(45px); }
+.icon-strip5 .icon:nth-child(7) { transform: rotate(72deg) translate(45px); }
+.icon-strip5 .icon:nth-child(8) { transform: rotate(144deg) translate(45px); }
+.icon-strip5 .icon:nth-child(9) { transform: rotate(216deg) translate(45px); }
+.icon-strip5 .icon:nth-child(10) { transform: rotate(288deg) translate(45px); }
+
+
+.hidden{
+    display: none;
+}
+
+.loose{
+
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px); }
+    20% { transform: translateX(10px); }
+    30% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+    60% { transform: translateX(10px); }
+    70% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    90% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    display: inline-block;
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+}

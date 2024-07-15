@@ -8,58 +8,89 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="up-button" onclick="rotateSelectedCircle('right')">&#8679;</button> <!-- Flecha hacia arriba -->
-        <button class="down-button" onclick="rotateSelectedCircle('left')">&#8681;</button> <!-- Flecha hacia abajo -->
+        <div id="contador">00:00</div>
+        <button class="up-button" onclick="rotateSelectedCircle('right')">&#8679;</button> 
+        <button class="down-button" onclick="rotateSelectedCircle('left')">&#8681;</button> 
     </div>
     <div class="circles-container">
-        <div class="circle circle1" onclick="selectCircle('circle1')">
-            <div class="icon-strip1">
-                <!-- Tira de iconos alrededor del círculo 1 -->
-                <i class="icon">🔥</i>
-                <i class="icon">⭐</i>
-                <i class="icon">🔶</i>
-                <i class="icon">💧</i>
-                <i class="icon">🌟</i>
+        <div class="circle circle1 " onclick="selectCircle('circle1')" id="circ1">
+            <div class="icon-strip1" id="strip1">
+                <img class="icon loose" src="./img/icono_loose1.png">
+                <img class="icon loose" src="./img/icono_loose2.png">
+                <img class="icon loose" src="./img/icono_loose3.png">
+                <img class="icon loose" src="./img/icono_loose4.png">
+                <img class="icon loose" src="./img/icono_loose5.png">
+
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+
             </div>
         </div>
-        <div class="circle circle2" onclick="selectCircle('circle2')">
-            <div class="icon-strip2">
-                <!-- Tira de iconos alrededor del círculo 2 -->
-                <i class="icon">🌟</i>
-                <i class="icon">🔥</i>
-                <i class="icon">⭐</i>
-                <i class="icon">🔶</i>
-                <i class="icon">💧</i>
+        <div class="circle circle2" onclick="selectCircle('circle2')" id="circ2">
+            <div class="icon-strip2" id="strip2">
+                <img class="icon loose" src="./img/icono_loose1.png">
+                <img class="icon loose" src="./img/icono_loose2.png">
+                <img class="icon loose" src="./img/icono_loose3.png">
+                <img class="icon loose" src="./img/icono_loose4.png">
+                <img class="icon loose" src="./img/icono_loose5.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+
             </div>
         </div>
-        <div class="circle circle3" onclick="selectCircle('circle3')">
-            <div class="icon-strip3">
-                <!-- Tira de iconos alrededor del círculo 3 -->
-                <i class="icon">💧</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🔥</i>
-                <i class="icon">⭐</i>
-                <i class="icon">🔶</i>
+        <div class="circle circle3" onclick="selectCircle('circle3')" id="circ3">
+            <div class="icon-strip3" id="strip3">
+                <img class="icon loose" src="./img/icono_loose1.png">
+                <img class="icon loose" src="./img/icono_loose2.png">
+                <img class="icon loose" src="./img/icono_loose3.png">
+                <img class="icon loose" src="./img/icono_loose4.png">
+                <img class="icon loose" src="./img/icono_loose5.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+
             </div>
         </div>
-        <div class="circle circle4" onclick="selectCircle('circle4')">
-            <div class="icon-strip4">
-                <!-- Tira de iconos alrededor del círculo 4 -->
-                <i class="icon">🔶</i>
-                <i class="icon">💧</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🔥</i>
-                <i class="icon">⭐</i>
+        <div class="circle circle4" onclick="selectCircle('circle4')" id="circ4">
+            <div class="icon-strip4" id="strip4">
+                <img class="icon loose" src="./img/icono_loose1.png">
+                <img class="icon loose" src="./img/icono_loose2.png">
+                <img class="icon loose" src="./img/icono_loose3.png">
+                <img class="icon loose" src="./img/icono_loose4.png">
+                <img class="icon loose" src="./img/icono_loose5.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+
             </div>
         </div>
-        <div class="circle circle5" onclick="selectCircle('circle5')">
-            <div class="icon-strip5">
-                <!-- Tira de iconos alrededor del círculo 5 -->
-                <i class="icon">⭐</i>
-                <i class="icon">🔶</i>
-                <i class="icon">💧</i>
-                <i class="icon">🌟</i>
-                <i class="icon">🔥</i>
+        <div class="circle circle5" onclick="selectCircle('circle5')" id="circ5"> 
+            <div class="icon-strip5" id="strip5">
+                <img class="icon loose" src="./img/icono_loose1.png">
+                <img class="icon loose" src="./img/icono_loose2.png">
+                <img class="icon loose" src="./img/icono_loose3.png">
+                <img class="icon loose" src="./img/icono_loose4.png">
+                <img class="icon loose" src="./img/icono_loose5.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
+                <img class="icon hidden" src="./img/icono_win.png">
 
             </div>
         </div>
