@@ -31,11 +31,9 @@ body {
 
 .button-container button:hover {
     background-color: rgba(255, 255, 255, 1);
+
 }
 
-.button-container button:focus {
-    outline: none;
-}
 
 .down-button {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Agrega sombra al botón hacia abajo */
@@ -43,8 +41,8 @@ body {
 
 .circles-container {
     position: relative;
-    width: 300px; /* Ajustado para ser más pequeño */
-    height: 300px; /* Ajustado para ser más pequeño */
+    width: 600px; /* Ajustado para ser más grande */
+    height: 600px; /* Ajustado para ser más grande */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,40 +56,40 @@ body {
     border-radius: 50%;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     position: absolute;
     transition: transform 0.5s ease-in-out;
 }
 
 /* Tamaños y posiciones de los círculos */
 .circle1 {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     z-index: 1;
 }
 
 .circle2 {
-    width: 240px;
-    height: 240px;
+    width: 400px;
+    height: 400px;
     z-index: 2;
 }
 
 .circle3 {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     z-index: 3;
 }
 
 .circle4 {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     z-index: 4;
 }
 
 .circle5 {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     z-index: 5;
 }
 
@@ -99,26 +97,41 @@ body {
     outline: 2px solid red; /* Resalta el círculo seleccionado */
 }
 
-.icon-strip {
+.icon-strip1, .icon-strip2, .icon-strip3, .icon-strip4, .icon-strip5 {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    top: 50%; /* Ajusta los iconos al centro vertical del círculo */
+    left: 50%; /* Ajusta los iconos al centro horizontal del círculo */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .icon {
     position: absolute;
     font-size: 12px; /* Ajusta el tamaño de los íconos según sea necesario */
 }
-
-/* Distribuye los íconos en un círculo */   
-.icon-strip .icon:nth-child(1) { transform: rotate(0deg) translateY(50%); }
-.icon-strip .icon:nth-child(2) { transform: rotate(72deg) translateY(50%); }
-.icon-strip .icon:nth-child(3) { transform: rotate(144deg) translateY(50%); }
-.icon-strip .icon:nth-child(4) { transform: rotate(216deg) translateY(50%); }
-.icon-strip .icon:nth-child(5) { transform: rotate(288deg) translateY(50%); }
-
+.icon-strip1 .icon:nth-child(1) { transform: rotate(0deg) translate(225px); }
+.icon-strip1 .icon:nth-child(2) { transform: rotate(72deg) translate(225px); }
+.icon-strip1 .icon:nth-child(3) { transform: rotate(144deg) translate(225px); }
+.icon-strip1 .icon:nth-child(4) { transform: rotate(216deg) translate(225px); }
+.icon-strip1 .icon:nth-child(5) { transform: rotate(288deg) translate(225px); }
+.icon-strip2 .icon:nth-child(1) { transform: rotate(0deg) translate(180px); }
+.icon-strip2 .icon:nth-child(2) { transform: rotate(72deg) translate(180px); }
+.icon-strip2 .icon:nth-child(3) { transform: rotate(144deg) translate(180px); }
+.icon-strip2 .icon:nth-child(4) { transform: rotate(216deg) translate(180px); }
+.icon-strip2 .icon:nth-child(5) { transform: rotate(288deg) translate(180px); }
+.icon-strip3 .icon:nth-child(1) { transform: rotate(0deg) translate(135px); }
+.icon-strip3 .icon:nth-child(2) { transform: rotate(72deg) translate(135px); }
+.icon-strip3 .icon:nth-child(3) { transform: rotate(144deg) translate(135px); }
+.icon-strip3 .icon:nth-child(4) { transform: rotate(216deg) translate(135px); }
+.icon-strip3 .icon:nth-child(5) { transform: rotate(288deg) translate(135px); }
+.icon-strip4 .icon:nth-child(1) { transform: rotate(0deg) translate(90px); }
+.icon-strip4 .icon:nth-child(2) { transform: rotate(72deg) translate(90px); }
+.icon-strip4 .icon:nth-child(3) { transform: rotate(144deg) translate(90px); }
+.icon-strip4 .icon:nth-child(4) { transform: rotate(216deg) translate(90px); }
+.icon-strip4 .icon:nth-child(5) { transform: rotate(288deg) translate(90px); }
+.icon-strip5 .icon:nth-child(1) { transform: rotate(0deg) translate(45px); }
+.icon-strip5 .icon:nth-child(2) { transform: rotate(72deg) translate(45px); }
+.icon-strip5 .icon:nth-child(3) { transform: rotate(144deg) translate(45px); }
+.icon-strip5 .icon:nth-child(4) { transform: rotate(216deg) translate(45px); }
+.icon-strip5 .icon:nth-child(5) { transform: rotate(288deg) translate(45px); }
